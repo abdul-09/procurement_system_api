@@ -1,0 +1,30 @@
+from django.contrib import admin
+from .models import *
+
+
+# Register your models here.
+admin.site.register(User)
+admin.site.register(Role)
+admin.site.register(UserRole)
+admin.site.register(VendorProfile)
+admin.site.register(VendorProfileAuditLog)
+admin.site.register(Tender)
+admin.site.register(TenderAmendment)
+admin.site.register(TenderVendorNotification)
+admin.site.register(Bid)
+admin.site.register(EvaluationCriteria)
+admin.site.register(BidEvaluation)
+admin.site.register(BidScore)
+admin.site.register(Contract)
+admin.site.register(ContractMilestone)
+admin.site.register(ContractAmendment)
+admin.site.register(VendorContractPerformance)
+admin.site.register(ApprovalStage)
+admin.site.register(ApprovalWorkflow)
+admin.site.register(ApprovalLog)
+admin.site.register(Notification)
+admin.site.register(NotificationPreferences)
+admin.site.register(TenderReport)
+admin.site.register(VendorPerformance)
+admin.site.register(SpendAnalytics)
+admin.site.register(AuditLog)
