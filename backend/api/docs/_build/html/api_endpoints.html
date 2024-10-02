@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>API Endpoints &mdash; E-PROCUREMENT DOCUMENTATION 0.0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=d45e8c67"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="JWT Authentication Middleware" href="middleware.html" />
+    <link rel="prev" title="api" href="modules.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            E-PROCUREMENT DOCUMENTATION
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">api</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">API Endpoints</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#admin-and-schema-documentation">Admin and Schema Documentation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#authentication">Authentication</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tender-management">Tender Management</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bid-management">Bid Management</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#contract-management">Contract Management</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#vendor-performance">Vendor Performance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#approval-workflow">Approval Workflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#notifications">Notifications</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="middleware.html">JWT Authentication Middleware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="websockets.html">WebSocket Consumers And Celery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="signals.html">Handle Notification Signal</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="architectural%20design.html">Architectural design</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">E-PROCUREMENT DOCUMENTATION</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">api</a></li>
+      <li class="breadcrumb-item active">API Endpoints</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/api_endpoints.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="api-endpoints">
+<span id="id1"></span><h1>API Endpoints<a class="headerlink" href="#api-endpoints" title="Link to this heading"></a></h1>
+<p>This section provides a detailed description of the URL patterns and the expected payloads for various API endpoints in the E-Procurement. The examples include payload structures for both requests and responses.</p>
+<section id="admin-and-schema-documentation">
+<h2>Admin and Schema Documentation<a class="headerlink" href="#admin-and-schema-documentation" title="Link to this heading"></a></h2>
+<blockquote>
+<div><p><strong>Endpoint:</strong> <cite>/admin/</cite></p>
+<p><strong>Method:</strong> <cite>GET</cite></p>
+<p><strong>Admin site</strong></p>
+<p><strong>Purpose:</strong> Access the Django admin interface.</p>
+<p><strong>Endpoint:</strong> <cite>/api/schema/</cite></p>
+<p><strong>Method:</strong> <cite>GET</cite></p>
+<p><strong>API schema</strong></p>
+<p><strong>Purpose:</strong> Access the API schema documentation.</p>
+<p><strong>Endpoint:</strong> <cite>/api/docs/</cite></p>
+<p><strong>Method:</strong> <cite>GET</cite></p>
+<p><strong>API documentation</strong></p>
+<p><strong>Purpose:</strong> Access the API documentation.</p>
+</div></blockquote>
+</section>
+<section id="authentication">
+<h2>Authentication<a class="headerlink" href="#authentication" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><cite>POST /register/</cite>: Register a new user.</p></li>
+<li><p><cite>POST /login/</cite>: Authenticate a user and return a JWT token.</p></li>
+<li><p><cite>POST /token/refresh/</cite>: Refresh an expired access token.</p></li>
+</ul>
+</section>
+<section id="tender-management">
+<h2>Tender Management<a class="headerlink" href="#tender-management" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><cite>GET /tenders/</cite>: List all tenders.</p></li>
+<li><p><cite>POST /tenders/</cite>: Create a new tender.</p></li>
+<li><p><cite>GET /tenders/&lt;id&gt;/</cite>: Retrieve details of a specific tender.</p></li>
+<li><p><cite>PATCH /tenders/&lt;id&gt;/</cite>: Update a tender.</p></li>
+<li><p><cite>DELETE /tenders/&lt;id&gt;/</cite>: Delete a tender.</p></li>
+</ul>
+</section>
+<section id="bid-management">
+<h2>Bid Management<a class="headerlink" href="#bid-management" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><cite>GET /bids/</cite>: List all bids.</p></li>
+<li><p><cite>POST /bids/</cite>: Submit a new bid.</p></li>
+<li><p><cite>GET /bids/&lt;id&gt;/</cite>: Retrieve bid details.</p></li>
+<li><p><cite>PATCH /bids/&lt;id&gt;/</cite>: Update a bid.</p></li>
+<li><p><cite>DELETE /bids/&lt;id&gt;/</cite>: Delete a bid.</p></li>
+</ul>
+</section>
+<section id="contract-management">
+<h2>Contract Management<a class="headerlink" href="#contract-management" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><cite>GET /contracts/</cite>: List all contracts.</p></li>
+<li><p><cite>POST /contracts/</cite>: Create a new contract.</p></li>
+<li><p><cite>GET /contracts/&lt;id&gt;/</cite>: Retrieve contract details.</p></li>
+<li><p><cite>PATCH /contracts/&lt;id&gt;/</cite>: Update contract details.</p></li>
+<li><p><cite>DELETE /contracts/&lt;id&gt;/</cite>: Delete a contract.</p></li>
+</ul>
+</section>
+<section id="vendor-performance">
+<h2>Vendor Performance<a class="headerlink" href="#vendor-performance" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><cite>GET /vendor-performance/</cite>: List vendor performance reviews.</p></li>
+<li><p><cite>POST /vendor-performance/</cite>: Create a new performance review.</p></li>
+<li><p><cite>GET /vendor-performance/&lt;id&gt;/</cite>: Retrieve performance review details.</p></li>
+<li><p><cite>PATCH /vendor-performance/&lt;id&gt;/</cite>: Update a performance review.</p></li>
+<li><p><cite>DELETE /vendor-performance/&lt;id&gt;/</cite>: Delete a performance review.</p></li>
+</ul>
+</section>
+<section id="approval-workflow">
+<h2>Approval Workflow<a class="headerlink" href="#approval-workflow" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><cite>GET /approval-workflows/</cite>: List all approval workflows.</p></li>
+<li><p><cite>POST /approval-workflows/</cite>: Create a new workflow.</p></li>
+<li><p><cite>GET /approval-workflows/&lt;id&gt;/</cite>: Retrieve a workflow.</p></li>
+<li><p><cite>PATCH /approval-workflows/&lt;id&gt;/</cite>: Update a workflow.</p></li>
+<li><p><cite>DELETE /approval-workflows/&lt;id&gt;/</cite>: Delete a workflow.</p></li>
+</ul>
+</section>
+<section id="notifications">
+<h2>Notifications<a class="headerlink" href="#notifications" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a href="#id2"><span class="problematic" id="id3">`</span></a>GET /notifications/<a href="#id4"><span class="problematic" id="id5">`</span></a><a href="#id6"><span class="problematic" id="id7">**</span></a>: List all notifications.</p></li>
+<li><p><cite>POST /notifications/</cite>: Create a new notification.</p></li>
+<li><p><cite>GET /notifications/&lt;id&gt;/</cite>: Retrieve notification details.</p></li>
+<li><p><cite>PATCH /notifications/&lt;id&gt;/</cite>: Update notification details.</p></li>
+<li><p><cite>DELETE /notifications/&lt;id&gt;/</cite>: Delete a notification.</p>
+</li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="modules.html" class="btn btn-neutral float-left" title="api" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="middleware.html" class="btn btn-neutral float-right" title="JWT Authentication Middleware" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Abdulaziz Hussein.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
