@@ -4,7 +4,7 @@ from django.utils import timezone
 from channels.layers import get_channel_layer
 from asgiref.sync import async_to_sync
 from django.conf import settings
-from .notifications import send_sms_notification, send_email_notification
+from .notifications import  send_email_notification
 from .models import Notification, Tender, VendorProfile, User, TenderVendorNotification, Bid, Contract, ContractMilestone
 
 @shared_task
